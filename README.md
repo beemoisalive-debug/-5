@@ -1,11 +1,2 @@
-let y = 30;
-
-function setup() {
-  createCanvas(400, 300);
-}
-
-function draw() {
-  background(255);
-  y = y + 1;
-  circle(200, y, 40);
-}
+으아... 모르겠다!! 여기엔 뭘 적어야 하는 거지.
+#디지털아트프로그래밍5
