@@ -1,5 +1,4 @@
-//# -5
-//디지털아트 프로그래밍 과제 5번째
+let y = 30;
 
 function setup() {
   createCanvas(400, 300);
@@ -7,5 +6,6 @@ function setup() {
 
 function draw() {
   background(255);
-  circle(200, 150, 40);
+  y = y + 1;
+  circle(200, y, 40);
 }
