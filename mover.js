@@ -24,5 +24,12 @@ class Mover {
       this.velocity.y *= -1;
       this.position.y = height;
     }
+    if (this.position.x > width) {
+      this.velocity.x *= -1;
+      this.position.x = width;
+    } else if (this.position.x < 0) {
+      this.velocity.x *= -1;
+      this.position.x = 0;
+    }
   }
 }
