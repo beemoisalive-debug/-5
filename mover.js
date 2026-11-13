@@ -18,4 +18,11 @@ class Mover {
   show() {
     circle(this.position.x, this.position.y, 40);
   }
+
+  checkEdges() {
+    if (this.position.y > height) {
+      this.velocity.y *= -1;
+      this.position.y = height;
+    }
+  }
 }
