@@ -1,10 +1,12 @@
 class Mover {
   constructor() {
     this.position = createVector(200, 30);
-    this.velocity = createVector(0, 1);
+    this.velocity = createVector(0, 0);
+    this.acceleration = createVector(0, 0.1);
   }
 
   update() {
+    this.velocity.add(this.acceleration);
     this.position.add(this.velocity);
   }
 
