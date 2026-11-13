@@ -1,12 +1,14 @@
 class Mover {
-  constructor() {
-    this.position = createVector(200, 30);
+  constructor(x, y, mass) {
+    this.mass = mass;
+    this.position = createVector(x, y);
     this.velocity = createVector(0, 0);
     this.acceleration = createVector(0, 0);
   }
 
   applyForce(force) {
-    this.acceleration.add(force);
+    let f = p5.Vector.div(force, this.mass);
+    this.acceleration.add(f);
   }
 
   update() {
@@ -16,7 +18,7 @@ class Mover {
   }
 
   show() {
-    circle(this.position.x, this.position.y, 40);
+    circle(this.position.x, this.position.y, this.mass * 16);
   }
 
   checkEdges() {
