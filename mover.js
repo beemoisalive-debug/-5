@@ -1,6 +1,7 @@
 class Mover {
-  constructor(x, y, mass) {
+  constructor(x, y, mass, c) {
     this.mass = mass;
+    this.color = c;
     this.position = createVector(x, y);
     this.velocity = createVector(0, 0);
     this.acceleration = createVector(0, 0);
@@ -18,6 +19,8 @@ class Mover {
   }
 
   show() {
+    noStroke();
+    fill(this.color);
     circle(this.position.x, this.position.y, this.mass * 16);
   }
 
