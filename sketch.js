@@ -1,11 +1,12 @@
-let y = 30;
+let mover;
 
 function setup() {
   createCanvas(400, 300);
+  mover = new Mover();
 }
 
 function draw() {
   background(255);
-  y = y + 1;
-  circle(200, y, 40);
+  mover.update();
+  mover.show();
 }
